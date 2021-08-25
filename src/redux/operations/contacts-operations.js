@@ -1,6 +1,4 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-
-// import * as contactsActions from './contactsActions.js'
+import { createAsyncThunk } from '@reduxjs/toolkit'
 import {
   getContact,
   postContact,
@@ -50,21 +48,6 @@ export const deleteItem = createAsyncThunk(
 
 //   try {
 //     const contacts = await getContact()
-//     dispatch(contactsActions.fetchContactsSuccess(contacts))
-//   } catch (error) {
-//     dispatch(contactsActions.fetchContactsError(error.message))
-//   }
-// }
-
-//
-// export const postContacts = () => (dispatch) => {
-//   dispatch(contactsActions.fetchContactsRequest())
-
-//   const contacts = addContact()
-//   dispatch(contactsActions.fetchContactsSuccess(contacts))
-
-//   try {
-//     const contacts = addContact()
 //     dispatch(contactsActions.fetchContactsSuccess(contacts))
 //   } catch (error) {
 //     dispatch(contactsActions.fetchContactsError(error.message))

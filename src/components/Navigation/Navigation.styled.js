@@ -36,14 +36,16 @@ export const HeaderTitle = styled.h2`
 `
 
 export const Nav = styled.nav`
+  align-items: center;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 `
 export const Navlogo = styled(NavLink)`
-  font-size: 18px;
+  font-family: Roboto;
+  font-size: 24px;
   cursor: pointer;
   font-weight: 700;
-  padding-right: 25px;
+  padding-right: 45px;
   text-decoration: none;
-  color: #fd8100;
+  color: #b5b5b5;
 `

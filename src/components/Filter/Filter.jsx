@@ -11,8 +11,8 @@ import { Input } from '../ContactForm/ContactForm.styled'
 import { FilterContainer } from './Filter.styled'
 // import { getFilter } from '../../redux/selectors/contacts-selectors'
 // import { filterItem } from '../../redux/actions/filter'
-import { getFilter } from '../../redux/contacts/contacts-selectors'
-import { changeFilter } from '../../redux/contacts/contactsActions'
+import { getFilter } from '../../redux/selectors/contacts-selectors'
+import { changeFilter } from '../../redux/actions/contacts-actions'
 
 export default function Filter({ onChange }) {
   const dispatch = useDispatch()

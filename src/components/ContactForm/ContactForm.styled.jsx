@@ -8,6 +8,7 @@ export const InputDiv = styled.div`
   display: flex;
 `
 export const Input = styled.input`
+  display: block;
   padding: 3px 10px;
   border: 2px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;

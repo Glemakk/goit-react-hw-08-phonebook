@@ -1,7 +1,6 @@
 import { createAction } from '@reduxjs/toolkit'
 
 // Это 3 синхронных actions, кот-е дойдут до редюсера
-
 //
 // pending
 // export const fetchContactsRequest = createAction(
@@ -16,6 +15,6 @@ import { createAction } from '@reduxjs/toolkit'
 
 export const changeFilter = createAction('contacts/changeFilter')
 
+// addContact и deleteContact перенесли в operations т.к. это асинхронные экшены с запросом API
 // export const addContact = createAction('contacts/add')
-
 // export const deleteContact = createAction('contacts/delete')

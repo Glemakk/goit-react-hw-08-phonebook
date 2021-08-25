@@ -6,9 +6,9 @@ import { IconContext } from 'react-icons'
 
 // import { getVisibleContacts } from '../../redux/selectors/contacts-selectors'
 // import { deleteItem } from '../../redux/actions/item'
-import { deleteItem } from '../../redux/contacts/contactsOperations'
-import { getVisibleContacts } from '../../redux/contacts/contacts-selectors'
-import { fetchContacts } from '../../redux/contacts/contactsOperations'
+import { deleteItem } from '../../redux/operations/contacts-operations'
+import { getVisibleContacts } from '../../redux/selectors/contacts-selectors'
+import { fetchContacts } from '../../redux/operations/contacts-operations'
 
 import { List, Item } from './ContactList.styled'
 import IconButton from '../IconButton'

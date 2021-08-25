@@ -1,5 +1,5 @@
-// import { useState, useEffect } from 'react'
-// import { connect } from 'react-redux'
+import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 // import * as actions from './redux/actions/explain-actions'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
@@ -14,14 +14,20 @@ import HomeView from './redux/views/HomeView'
 import RegisterView from './redux/views/RegisterView'
 import LoginView from './redux/views/LoginView'
 import Container from './components/Container'
-// import { v4 as uuidv4 } from 'uuid'
+import authOperations from './redux/operations/auth-operations'
+console.log('authOperations >>', authOperations)
 
 const App = () => {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(authOperations.refreshCurrentUser())
+  }, [dispatch])
+
   return (
     <>
       <AppBar />
       <Container>
-        {/* <h1>Phonebook</h1> */}
         <Switch>
           <Route path="/" exact>
             <HomeView />
