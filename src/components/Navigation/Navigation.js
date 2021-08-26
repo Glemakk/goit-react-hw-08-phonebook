@@ -1,4 +1,6 @@
 import Container from '../Container'
+import { useSelector } from 'react-redux'
+import authSelectors from '../../redux/selectors/auth-selectors'
 import { Link, HeaderTitle, Nav, Navlogo } from './Navigation.styled'
 
 const styles = {
@@ -8,6 +10,8 @@ const styles = {
 }
 
 const Navigation = () => {
+  const isLoggedIn = useSelector(authSelectors.getIsLoggedIn)
+
   return (
     <Nav>
       <div>
@@ -19,9 +23,11 @@ const Navigation = () => {
         <Link activeClassName="activeLink" exact to="/">
           Home
         </Link>
-        <Link className="link" activeClassName="activeLink" to="/contacts">
-          Contacts
-        </Link>
+        {isLoggedIn && (
+          <Link className="link" activeClassName="activeLink" to="/contacts">
+            Contacts
+          </Link>
+        )}
       </div>
     </Nav>
   )
