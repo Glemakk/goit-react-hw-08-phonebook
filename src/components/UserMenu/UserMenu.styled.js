@@ -12,13 +12,23 @@ export const Img = styled.img`
   margin-right: 10px;
 `
 export const LogOutBtn = styled.button`
-  font-weight: 400;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 700;
   line-height: 1.33;
   width: 85px;
   background-color: orange;
   border: none;
   outline: none;
   border-radius: 4px;
-  box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%),
-    0px 2px 1px rgb(0 0 0 / 20%);
+  &:focus,
+  &:hover {
+    box-shadow: 2px 3px 17px 0px rgb(255 255 255 / 78%),
+      -1px 0px 2px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
+    transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+`
+export const LogOutSpan = styled.span`
+  margin-top: -1px;
+  display: block;
 `

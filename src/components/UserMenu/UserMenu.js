@@ -3,7 +3,7 @@ import authSelectors from '../../redux/selectors/auth-selectors'
 import { logOut } from '../../redux/operations/auth-operations'
 // import { toast, Zoom } from 'react-toastify'
 import defaultAvatar from './default-avatar.png'
-import { Span, Img, LogOutBtn } from './UserMenu.styled'
+import { Span, Img, LogOutBtn, LogOutSpan } from './UserMenu.styled'
 
 const styles = {
   container: {
@@ -22,7 +22,7 @@ const UserMenu = () => {
       <Img src={avatar} alt="avatar" width="32" />
       <Span>Welcome, {name}</Span>
       <LogOutBtn type="button" onClick={() => dispatch(logOut())}>
-        Log Out
+        <LogOutSpan>Log Out</LogOutSpan>
       </LogOutBtn>
     </div>
   )

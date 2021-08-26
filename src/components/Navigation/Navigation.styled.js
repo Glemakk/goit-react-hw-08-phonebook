@@ -49,3 +49,11 @@ export const Navlogo = styled(NavLink)`
   text-decoration: none;
   color: #b5b5b5;
 `
+
+export const PhoneSpan = styled.span`
+  text-shadow: 2px 2px 3px #5a5a5a;
+  color: #5ba9ec;
+`
+export const BookSpan = styled.span`
+  text-shadow: 2px 2px 3px #000000;
+`

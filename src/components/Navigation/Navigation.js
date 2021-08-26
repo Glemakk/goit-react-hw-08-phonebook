@@ -1,13 +1,13 @@
 import Container from '../Container'
 import { useSelector } from 'react-redux'
 import authSelectors from '../../redux/selectors/auth-selectors'
-import { Link, HeaderTitle, Nav, Navlogo } from './Navigation.styled'
+import { Link, PhoneSpan, BookSpan, Nav, Navlogo } from './Navigation.styled'
 
-const styles = {
-  link: {
-    color: 'rgb(91 169 236)',
-  },
-}
+// const styles = {
+//   link: {
+//     color: 'rgb(91 169 236)',
+//   },
+// }
 
 const Navigation = () => {
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn)
@@ -16,7 +16,8 @@ const Navigation = () => {
     <Nav>
       <div>
         <Navlogo exact to="/">
-          <span style={styles.link}>Phone</span>book
+          <PhoneSpan>Phone</PhoneSpan>
+          <BookSpan>book</BookSpan>
         </Navlogo>
       </div>
       <div>
