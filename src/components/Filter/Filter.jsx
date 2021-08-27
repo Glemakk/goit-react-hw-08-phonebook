@@ -19,7 +19,7 @@ export default function Filter({ onChange }) {
   const filter = useSelector(getFilter)
   return (
     <label>
-      <h2>Contacts</h2>
+      {/* <h2>Contacts</h2> */}
       <FilterContainer>
         <h3>Find contacts by name</h3>
         <InputDiv>

@@ -1,13 +1,8 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-// import { addItem } from '../contacts/contactsOperations'
-// import { getItems } from '../contacts/contacts-selectors'
 
-// import { toast, Zoom } from 'react-toastify'
-// import { FcPhoneAndroid, FcBusinessContact } from 'react-icons/fc'
-// import { IconContext } from 'react-icons'
 import { register } from '../operations/auth-operations'
-import Button from '../../components/Button'
+import FormButton from '../../components/Button/FormButton'
 import {
   Form,
   InputDiv,
@@ -21,7 +16,6 @@ const RegisterView = () => {
   const [password, setPassword] = useState('')
 
   const handleChange = ({ target: { name, value } }) => {
-    //   const { name, value } = event.currentTarget
     switch (name) {
       case 'name':
         return setName(value)
@@ -94,7 +88,7 @@ const RegisterView = () => {
           ></Input>
         </label>
       </InputDiv>
-      <Button text="Add contact" type="submit" />
+      <FormButton text="Sign In" type="submit" />
     </Form>
   )
 }

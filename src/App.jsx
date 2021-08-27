@@ -44,7 +44,7 @@ const LoginView = lazy(
 const ContactsView = lazy(
   async () =>
     await import(
-      './redux/views/ContactsView' /*webpackChunkName: "contacts-view"*/
+      './redux/views/ContactsView/ContactsView' /*webpackChunkName: "contacts-view"*/
     ),
 )
 

@@ -6,8 +6,12 @@ export const Form = styled.form`
 
 export const InputDiv = styled.div`
   display: flex;
+  justify-content: center;
 `
 export const Input = styled.input`
+  width: 320px;
+  max-width: 100%;
+  height: 35px;
   display: block;
   padding: 3px 10px;
   border: 2px solid rgba(33, 33, 33, 0.2);

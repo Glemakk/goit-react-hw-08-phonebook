@@ -1,13 +1,8 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-// import { addItem } from '../contacts/contactsOperations'
-// import { getItems } from '../contacts/contacts-selectors'
 
-// import { toast, Zoom } from 'react-toastify'
-// import { FcPhoneAndroid, FcBusinessContact } from 'react-icons/fc'
-// import { IconContext } from 'react-icons'
 import { logIn } from '../operations/auth-operations'
-import Button from '../../components/Button'
+import FormButton from '../../components/Button/FormButton'
 import {
   Form,
   InputDiv,
@@ -75,7 +70,7 @@ const LoginView = () => {
           ></Input>
         </label>
       </InputDiv>
-      <Button text="Log In" />
+      <FormButton text="Log In" />
     </Form>
   )
 }

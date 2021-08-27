@@ -13,9 +13,14 @@ import { IconContext } from 'react-icons'
 import Button from '../Button'
 import { Form, InputDiv, Input } from './ContactForm.styled'
 
+const styles = {
+  margin: { marginLeft: 28 },
+}
+
 const ContactForm = () => {
   const [name, setName] = useState('')
   const [number, setNumber] = useState('')
+  // const [email, setEmail] = useState('')
   const dispatch = useDispatch()
   const stateContacts = useSelector(getItems)
   console.log('stateContacts >>', stateContacts)
@@ -30,6 +35,8 @@ const ContactForm = () => {
       case 'number':
         setNumber(value)
         break
+      // case 'email':
+      //   setEmail(value)
       default:
         //можно вместо return написать, например, "Неподдерживаемый тип поля"
         return
@@ -57,6 +64,7 @@ const ContactForm = () => {
   const clearForm = () => {
     setName('')
     setNumber('')
+    // setEmail('')
   }
 
   return (
@@ -103,6 +111,27 @@ const ContactForm = () => {
             />
           </InputDiv>
         </label>
+
+        {/* <label>
+          <h2>E-mail</h2>
+          <InputDiv>
+            <IconContext.Provider value={{ size: '23px' }}>
+              <FcPhoneAndroid />
+            </IconContext.Provider>
+            &nbsp;
+            <Input
+              type="email"
+              name="email"
+              value={email}
+              onChange={handleChange}
+              // pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+              title="Номер телефона должен состоять из цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
+              required
+              autoComplete="off"
+              placeholder="e-mail@mail.com"
+            />
+          </InputDiv>
+        </label> */}
         <Button text="Add contact" />
       </Form>
     </div>
